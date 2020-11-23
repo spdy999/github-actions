@@ -91,11 +91,11 @@ export default {
   data: () => ({
     message: ""
   }),
-  created() {
-    Axios.get("https://localhost:5001/api/home")
+  asyncData(ctx) {
+    return Axios.get("http://localhost:5000/api/home")
       .then(({data}) => {
-        this.message = data;
+        return {message: data}
       })
-  }
+  },
 }
 </script>
