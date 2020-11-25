@@ -1,0 +1,24 @@
+name: Build My Application
+
+on: push
+
+jobs:
+  build:
+    # Job name is "Build our App"
+    name: Build our App
+    # Set the type of machine to run on
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Current Directory
+        run: pwd
+      - name: List Filed in Directory
+        run: ls
+#      # Checks out a copy of your repository on the ubuntu-latest machine
+#      - name: Hello world
+#        uses: actions/hello-world-javascript-action@v1
+#        with:
+#          who-to-great: 'Mona the Octocat'
+#        id: hello
+#      - name: Echo the greeting's time
+#        run: echo 'The time was ${{ steps.hello.outputs.time }}'
+        
